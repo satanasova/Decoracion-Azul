@@ -7888,6 +7888,19 @@ body {
     margin-left: auto; }
   .header-menu {
     max-width: 720px; }
+    .header-menu .user-utils .cart-icon {
+      position: relative; }
+      .header-menu .user-utils .cart-icon .cart-items {
+        font-size: 10px;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: -1px;
+        right: 40%;
+        transform: translateX(50%);
+        color: white;
+        background-color: #f09c5b;
+        border-radius: 50%; }
   .header-nav {
     font-family: "Cormorant Infant", serif; }
     .header-nav-link {
