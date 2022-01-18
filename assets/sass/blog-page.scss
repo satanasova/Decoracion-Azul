@@ -1,0 +1,84 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Fira+Sans+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import './base';
+@import './header';
+@import './footer';
+
+.wrapper {
+    max-width: 1140px; 
+}
+
+.hero {
+    background-color: #F7F6F4;
+    &-content {
+        width: 570px; 
+        max-width: 100%;
+        margin-left: auto;
+        padding: 200px 122px 50px 10px;
+
+        @media(max-width: 1200px) {
+            padding: 140px 80px 40px 10px;
+            margin-left: unset;
+
+        }
+        @media(max-width: 768px) {
+            padding: 50px 20px 20px 20px;
+        }
+    }
+
+    &-img {
+        // background: url('../imgs/hero-image.png') no-repeat center;
+        // background-size: cover;
+        max-width: 760px;
+        min-height: 680px;
+        height: 100%;
+    }
+}
+
+.blog-posts {
+    &-container {
+        .single-post {
+            &:nth-of-type(even) {
+                .blog-img-col {
+                    @media(min-width: 768px) {
+                        order: 1;
+                        padding-left: 0;
+                    }
+                }
+            }
+    
+            .blog-img {
+                img {
+                    min-height: 608px;
+                }
+            }
+            .blog-content {
+                .breadcrumbs {
+                    color: $color_primary;
+                    font-weight: 300;
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        margin-bottom: 3px;
+                        margin-right: 8px;
+                        width: 75px;
+                        height: 2px;
+                        background-color: currentColor;    
+                    }
+        
+                    a {
+                        &:not(:last-child) {
+                            &::after {
+                                content: ">";
+                                margin: 0 .2rem 0 .3rem;
+                            }
+                        }
+                    }
+                }
+        
+            }
+        }
+    
+    }
+}
