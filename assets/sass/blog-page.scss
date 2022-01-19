@@ -9,6 +9,24 @@
     max-width: 1140px; 
 }
 
+.header {
+    background: rgba(255, 255, 255, 0.9);
+    @media(max-width: 992px) {
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    &-logo {
+        width: 570px; 
+        max-width: 100%;
+        margin-left: auto;
+    }
+
+    &-menu {
+        max-width: 720px;
+    }
+}
+
+
 .hero {
     background-color: #F7F6F4;
     &-content {
