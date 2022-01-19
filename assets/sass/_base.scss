@@ -76,18 +76,11 @@ body {
     }
 
     .btn {
-        border-radius: 0;
-        font-size: 20px;
-        font-weight: 300;
-
-        &:hover {
-            color: currentColor;
-        }
-
         &-pr {
             background-color: $color_primary;
             color: white;
             padding: .4rem 1.55rem;
+            display: inline-block;
         }
 
         &-inline {

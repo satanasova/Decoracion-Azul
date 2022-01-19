@@ -7861,25 +7861,23 @@ body {
     @media (max-width: 576px) {
       body h2, body .h2 {
         font-size: 28px; } }
-  body .btn {
-    border-radius: 0;
-    font-size: 20px;
-    font-weight: 300; }
-    body .btn:hover {
-      color: currentColor; }
-    body .btn-pr {
-      background-color: #00568d;
-      color: white;
-      padding: .4rem 1.55rem; }
-    body .btn-inline {
-      color: #00568d;
-      border-bottom: 1px solid currentColor; }
+  body .btn-pr {
+    background-color: #00568d;
+    color: white;
+    padding: .4rem 1.55rem;
+    display: inline-block; }
+  body .btn-inline {
+    color: #00568d;
+    border-bottom: 1px solid currentColor; }
 
 .header {
   position: fixed;
   left: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.9); }
+  @media (max-width: 992px) {
+    .header {
+      background: rgba(255, 255, 255, 0.7); } }
   .header.solid-bg {
     background: white; }
   .header-logo {
@@ -7894,6 +7892,8 @@ body {
         font-size: 10px;
         width: 12px;
         height: 12px;
+        line-height: 10px;
+        font-weight: 800;
         position: absolute;
         top: -1px;
         right: 40%;
@@ -7901,6 +7901,14 @@ body {
         color: white;
         background-color: #f09c5b;
         border-radius: 50%; }
+        @media (max-width: 992px) {
+          .header-menu .user-utils .cart-icon .cart-items {
+            font-size: 12px;
+            width: 16px;
+            height: 16px;
+            line-height: 12px;
+            top: -5px;
+            right: 50%; } }
   .header-nav {
     font-family: "Cormorant Infant", serif; }
     .header-nav-link {
