@@ -5,6 +5,9 @@
 @import './header';
 @import './footer';
 
+.wrapper {
+    max-width: 1140px;
+}
 
 .header {
     background-color: rgba(255, 255, 255, 0.9);

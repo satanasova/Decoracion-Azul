@@ -5,6 +5,10 @@
 @import './header';
 @import './footer';
 
+.wrapper {
+    max-width: 970px;
+}
+
 .header {
     z-index: 1;
 }
@@ -12,33 +16,41 @@
 .hero {
     background-color: $color_gray;
     padding-top: 100px;
+    @media(min-width: 992px){
+        margin-bottom: 100px;
+    }
 
     &-content {
         width: 480px; 
         max-width: 100%;
-        margin-left: auto;
     }
 
     &-img {
-        position: absolute;
+        @media(min-width: 992px) {
+            position: absolute;
+        }
     }
 }
 
 .blog-article {
     &-content {
-        padding: 150px 60px 0 80px;
         font-weight: 300;
 
         .content-quote {
             color: $color_primary;
             font-size: 20px;
             font-style: italic;
-            padding: 80px;
+            margin: 10px;
+            position: relative;
+            @media(min-width: 768px) {
+                margin: 60px;
+            }
 
             .quotes {
                 position: absolute;
                 &.open {
-                    transform: translate(-150%, -150%);
+                    top: 0;
+                    left: 0;
                 }
                 &.close {
                     transform: rotate(180deg) translate(-150%, -150%);
