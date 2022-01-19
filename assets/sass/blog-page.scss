@@ -5,8 +5,18 @@
 @import './header';
 @import './footer';
 
-.wrapper {
-    max-width: 1140px;
+h1 {
+    font-size: 48px;
+    @media(max-width: 576px) {
+        font-size: 40px;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    @media(max-width: 576px) {
+        font-size: 28px;
+    }
 }
 
 .header {

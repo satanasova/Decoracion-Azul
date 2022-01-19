@@ -1,5 +1,20 @@
 @import './variables';
 
+.container-fluid {
+    max-width: 1440px;
+}
+
+.wrapper {
+    max-width: 1140px;
+    &.inner {
+        @media(min-width: 768px) {
+            padding-left: 85px;
+            padding-right: 85px;
+        }
+
+    }
+} 
+
 body {
     font-family: $font_regular;
 
@@ -20,6 +35,7 @@ body {
         &.btn-inline {
             color: $color_primary;
             border-bottom: 1px solid currentColor;
+            font-weight: 300;
         }
     
     }
@@ -63,41 +79,41 @@ body {
     .small-title {
         font-family: $font_cursive;
         font-size: 24px;
-        &::before {
-            content: '';
-            display: inline-block;
-            margin-bottom: 3px;
-            margin-right: 8px;
-            width: 75px;
-            height: 2px;
-            background-color: $color_highlight;
-            @media(max-width: 768px) {
-                display: block;
-                height: 4px;
-                margin: 0 auto;
-                transform: translateY(35px);
+        &.pre-line {
+            &::before {
+                content: '';
+                display: inline-block;
+                margin-bottom: 3px;
+                margin-right: 8px;
+                width: 75px;
+                height: 2px;
+                background-color: $color_highlight;
+                @media(max-width: 768px) {
+                    display: block;
+                    height: 4px;
+                    margin: 0 auto;
+                    transform: translateY(35px);
+                }   
             }
         }
+        &.under-line {
+            &::after {
+                content: '';
+                display: block;
+                width: 75px;
+                height: 2px;
+                background-color: $color_highlight;
+                margin: 5px auto;
+
+            }
+        }
+
     }
 
     .text-pale {
         color: rgba(176, 176, 176, 1);
         font-weight: 300;
         ;
-    }
-
-    h1 {
-        font-size: 48px;
-        @media(max-width: 576px) {
-            font-size: 40px;
-        }
-    }
-
-    h2 {
-        font-size: 40px;
-        @media(max-width: 576px) {
-            font-size: 28px;
-        }
     }
 
     .breadcrumbs {
@@ -110,7 +126,10 @@ body {
             margin-right: 8px;
             width: 75px;
             height: 2px;
-            background-color: currentColor;    
+            background-color: currentColor;  
+            @media(max-width: 576px) {
+                width: 40px;
+            } 
         }
 
         a {
