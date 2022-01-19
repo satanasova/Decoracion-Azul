@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch-sass": "node-sass assets/sass/blog-page.scss assets/css/blog-page.css -w",
+    "watch-sass": "node-sass assets/sass -o assets/css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch-sass"
   },

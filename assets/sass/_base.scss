@@ -3,12 +3,30 @@
 body {
     font-family: $font_regular;
 
+    .wrapper {
+        max-width: 1140px;
+    }
+    
+
     a {
         text-decoration: none;
         color: inherit;
         &:hover {
             color: currentColor;
         }
+
+        &.btn-pr {
+            background-color: $color_primary;
+            color: white;
+            padding: .4rem 1.55rem;
+            display: inline-block;
+        }
+    
+        &.btn-inline {
+            color: $color_primary;
+            border-bottom: 1px solid currentColor;
+        }
+    
     }
 
     ul {
@@ -29,9 +47,11 @@ body {
                 }
             }
         }
+    }
 
-
-
+    hr {
+        opacity: 1;
+        color: rgba(229, 229, 229, 1);  
     }
 
     .container-fluid {
@@ -85,19 +105,27 @@ body {
         }
     }
 
-    .btn {
-        &-pr {
-            background-color: $color_primary;
-            color: white;
-            padding: .4rem 1.55rem;
+    .breadcrumbs {
+        color: $color_primary;
+        font-weight: 300;
+        &::before {
+            content: "";
             display: inline-block;
+            margin-bottom: 3px;
+            margin-right: 8px;
+            width: 75px;
+            height: 2px;
+            background-color: currentColor;    
         }
 
-        &-inline {
-            color: $color_primary;
-            border-bottom: 1px solid currentColor;
+        a {
+            &:not(:last-child) {
+                &::after {
+                    content: ">";
+                    margin: 0 .2rem 0 .3rem;
+                }
+            }
         }
-
     }
 
 
