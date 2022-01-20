@@ -7875,7 +7875,6 @@ body {
       @media (max-width: 768px) {
         body .small-title.pre-line::before {
           display: block;
-          height: 4px;
           margin: 0 auto;
           transform: translateY(35px); } }
     body .small-title.under-line::after {

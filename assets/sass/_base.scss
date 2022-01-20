@@ -90,7 +90,6 @@ body {
                 background-color: $color_highlight;
                 @media(max-width: 768px) {
                     display: block;
-                    height: 4px;
                     margin: 0 auto;
                     transform: translateY(35px);
                 }   
