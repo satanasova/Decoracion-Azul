@@ -8037,9 +8037,9 @@ h2, .h2 {
       left: 50%;
       transform: translateX(-50%); }
     .recommended-articles .article-card.bordered::before {
-      top: 4%; }
+      top: 3%; }
     .recommended-articles .article-card.bordered::after {
-      bottom: 4%; }
+      bottom: 3%; }
   .recommended-articles .article-card-img {
     box-shadow: -18px 18px #F7F6F4;
     margin-bottom: 2rem; }
