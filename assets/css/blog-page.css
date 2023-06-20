@@ -7830,7 +7830,8 @@ body {
   font-family: "Fira Sans Condensed", sans-serif; }
   body a {
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    cursor: pointer; }
     body a:hover {
       color: currentColor; }
     body a.btn-pr {

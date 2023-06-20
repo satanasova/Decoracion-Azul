@@ -1,4 +1,4 @@
-import '../../node_modules/jquery/dist/jquery.min.js';
+// import '../../node_modules/jquery/dist/jquery.min.js';
 
 function headerOpacity() {
     const header = document.querySelector('.header');
@@ -12,12 +12,15 @@ function headerOpacity() {
     })
 }
 
+
 function filterBlogPost(blogContainerId) {
     const blogContainer = $(`#${blogContainerId}`);
-    const blogTabsContainer = $(blogContainer).find('.categories');
+    const blogTabsContainer = blogContainer.find('.categories');
     const blogPostsContainer = blogContainer.find('.blog-posts-container .wrapper');
     const blogPosts = blogPostsContainer.find('.single-post');
-
+    const btnLoadMore = blogContainer.find('#btn-load-more');
+    
+    
     $(blogTabsContainer).on('click', (e) => {
         const target = e.target;
         
@@ -43,7 +46,14 @@ function filterBlogPost(blogContainerId) {
             }
         }
     });
+
+    btnLoadMore.on('click', () => {
+        const newPosts = blogPosts.clone().slice(0,3);
+        blogPosts.push(...newPosts);
+        newPosts.appendTo(blogPostsContainer).hide().slideDown(500);
+    })
 }
+
 
 headerOpacity();
 filterBlogPost('blog-posts-home');
